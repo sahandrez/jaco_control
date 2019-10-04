@@ -1,0 +1,32 @@
+# Created by https://www.gitignore.io/api/venv,python,pycharm
+# Edit at https://www.gitignore.io/?templates=venv,python,pycharm
+
+### PyCharm ###
+# Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio and WebStorm
+# Reference: https://intellij-support.jetbrains.com/hc/en-us/articles/206544839
+
+/.idea
+
+### PyCharm Patch ###
+# Comment Reason: https://github.com/joeblau/gitignore.io/issues/186#issuecomment-215987721
+
+### Python ###
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Environments
+.env
+.venv
+.vscode/
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+### Python Patch ###
+.venv/
+
+# End of https://www.gitignore.io/api/venv,python,pycharm
