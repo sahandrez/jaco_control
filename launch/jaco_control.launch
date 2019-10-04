@@ -1,0 +1,13 @@
+<launch>
+    <!-- Launches the data recorder and controller. The robot is commanded directory and NOT by MoveIt -->
+    <arg name="robot_name" default="j2n6s300"/>
+    <arg name="gazebo_robot" default="false"/>
+    <arg name="exp" default="test"/>
+    <arg name="control" default="torque"/>
+
+    <node pkg="jaco_control" type="run_robot.py" name="jaco_controller" args="$(arg robot_name) $(arg gazebo_robot) $(arg exp) $(arg control)" output="screen"/>
+    <group if="$(arg gazebo_robot)">
+        <node pkg="jaco_control" type="run_interaction.py" name="jaco_interaction" output="screen"/>
+    </group>
+    <node pkg="jaco_control" type="record_data.sh" name="data_recorder" output="screen"/>
+</launch>
